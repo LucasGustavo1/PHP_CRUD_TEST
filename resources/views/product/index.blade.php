@@ -120,6 +120,7 @@
                                                                     data-bs-dismiss="modal" aria-label="Close"></button>
                                                             </div>
                                                             <div class="modal-body">
+
                                                                 <div class="input-group flex-nowrap">
                                                                     <span class="input-group-text"
                                                                         id="addon-wrapping">Descrição</span>
@@ -129,6 +130,7 @@
                                                                         name="description" aria-label="Username"
                                                                         aria-describedby="addon-wrapping">
                                                                 </div>
+
                                                                 <div class="input-group flex-nowrap">
                                                                     <span class="input-group-text"
                                                                         id="addon-wrapping">Quantidade</span>
@@ -138,6 +140,18 @@
                                                                         aria-label="Username"
                                                                         aria-describedby="addon-wrapping">
                                                                 </div>
+
+                                                                <div class="input-group flex-nowrap">
+                                                                    <span class="input-group-text"
+                                                                        id="addon-wrapping">Preço</span>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Digite o preço"
+                                                                        value="{{ $product->value }}" name="value"
+                                                                        aria-label="Username"
+                                                                        aria-describedby="addon-wrapping">
+                                                                </div>
+
+
                                                             </div>
 
 
