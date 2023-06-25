@@ -28,4 +28,18 @@ class ProductRequest extends FormRequest
             'product_types_id' => 'required|integer'
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'description.required'=>'A descrição é obrigatória.',
+            'quantity.required'=>'A quantidade é obrigatória',
+            'quantity.integer'=>'O campo quantidade precisa ser número inteiro',
+            'value.required'=>'O valor é obrigatório',
+            'product_types_id.required'=>'O tipo de produto é obrigatório',
+            'product_types_id.integer'=>'O campo Tipo de produto precisa ser número inteiro'
+
+
+        ];
+    }
 }
