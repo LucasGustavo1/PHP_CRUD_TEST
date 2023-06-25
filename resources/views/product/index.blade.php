@@ -197,6 +197,12 @@
                                                                 <h6 style="text-align: center">Deseja deletar esse produto
                                                                     ?<h6>
                                                             </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-bs-dismiss="modal">Fechar</button>
+                                                                <button type="submit"
+                                                                    class="btn btn-primary">Salvar</button>
+                                                            </div>
                                                     </form>
                                                 </div>
                                             </div>
