@@ -96,7 +96,17 @@
                                         <td>{{ $product->quantity }}</td>
                                         <td>{{ $product->value }}</td>
                                         <td>{{ $product->type->name }}</td>
+                                        <td>
+
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#editar{{ $product->id }}">
+                                                Editar
+                                            </button>
+
+
                                     </tr>
+                                    </td>
                                 @endforeach
                             </tbody>
                         </table>
@@ -105,7 +115,7 @@
             <div class="col-md-2"></div>
         </div>
 
-            </div>
+    </div>
 
 
 
