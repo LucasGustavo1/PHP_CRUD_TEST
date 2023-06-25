@@ -16,6 +16,11 @@
     <div class="row mt-5">
         <div class="col-md-2"></div>
         <div class="col-md-8">
+            @if (session('mensagem'))
+                <div class="alert alert-success" role="alert">
+                    {{ session('mensagem') }}
+                </div>
+            @endif
             <div class="card">
                 <div class="card-header">
                     <!-- Button trigger modal -->
