@@ -151,6 +151,16 @@
                                                                         aria-describedby="addon-wrapping">
                                                                 </div>
 
+                                                                <select class="form-select" name="product_types_id">
+                                                                    <option hidden
+                                                                        value="{{ $product->product_types_id }}">
+                                                                        {{ $product->type->name }}</option>
+                                                                    @foreach ($productsTypes as $type)
+                                                                        <option value="{{ $type->id }}">
+                                                                            {{ $type->name }}</option>
+                                                                    @endforeach
+                                                                </select>
+
 
                                                             </div>
 
