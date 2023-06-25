@@ -37,4 +37,21 @@ class ProductController extends Controller
             return back()->with('erro', 'Não foi possível sua ação');
         }
     }
+
+    public function update(ProductRequest $request, string $id)
+    {
+        try {
+            $product = Product::where('id', $id)->first();
+
+            $product->description = $request->description;
+            $product->quantity = $request->quantity;
+            $product->value = $request->value;
+            $product->product_types_id = $request->product_types_id;
+            $product->save();
+
+            return back()->with('mensagem', 'Produto atualizado com sucesso!');
+        }   catch (\Throwable $th) {
+            return back()->with('erro', 'Não foi possível sua ação');
+        }
+    }
 }
