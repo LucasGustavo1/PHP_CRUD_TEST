@@ -129,6 +129,15 @@
                                                                         name="description" aria-label="Username"
                                                                         aria-describedby="addon-wrapping">
                                                                 </div>
+                                                                <div class="input-group flex-nowrap">
+                                                                    <span class="input-group-text"
+                                                                        id="addon-wrapping">Quantidade</span>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Digite a quantidade"
+                                                                        value="{{ $product->quantity }}" name="quantity"
+                                                                        aria-label="Username"
+                                                                        aria-describedby="addon-wrapping">
+                                                                </div>
                                                             </div>
 
 
