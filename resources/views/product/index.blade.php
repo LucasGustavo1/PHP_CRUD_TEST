@@ -104,16 +104,37 @@
                                                 Editar
                                             </button>
 
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="editar{{ $product->id }}" tabindex="-1"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <form action="{{ route('products.update', $product->id) }}"
+                                                        method="POST">
+                                                        @csrf
+                                                        @method('put')
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                                                    Editando Produtos</h1>
+                                                                <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
 
-                                    </tr>
-                                    </td>
-                                @endforeach
-                            </tbody>
-                        </table>
+
+                                                </div>
+                                            </div>
+
+
                 </div>
             </div>
-            <div class="col-md-2"></div>
+            </tr>
+            @endforeach
+            </tbody>
+            </table>
         </div>
+    </div>
+    <div class="col-md-2"></div>
+    </div>
 
     </div>
 
