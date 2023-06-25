@@ -181,6 +181,16 @@
                                                 Deletar
                                             </button>
 
+                                            <div class="modal fade" id="deletar{{ $product->id }}" tabindex="-1"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <form action="{{ route('products.destroy', $product->id) }}"
+                                                        method="POST">
+                                                        
+                                                    </form>
+                                                </div>
+                                            </div>
+
 
                 </div>
             </div>
