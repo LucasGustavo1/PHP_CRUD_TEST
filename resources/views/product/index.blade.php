@@ -21,6 +21,11 @@
                     {{ session('mensagem') }}
                 </div>
             @endif
+            @if (session('erro'))
+                <div class="alert alert-danger" role="alert">
+                    {{ session('erro') }}
+                </div>
+            @endif
             <div class="card">
                 <div class="card-header">
                     <!-- Button trigger modal -->
