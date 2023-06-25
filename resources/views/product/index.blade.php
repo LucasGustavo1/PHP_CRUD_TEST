@@ -119,6 +119,17 @@
                                                                 <button type="button" class="btn-close"
                                                                     data-bs-dismiss="modal" aria-label="Close"></button>
                                                             </div>
+                                                            <div class="modal-body">
+                                                                <div class="input-group flex-nowrap">
+                                                                    <span class="input-group-text"
+                                                                        id="addon-wrapping">Descrição</span>
+                                                                    <input type="text" class="form-control"
+                                                                        placeholder="Digite a descrição"
+                                                                        value="{{ $product->description }}"
+                                                                        name="description" aria-label="Username"
+                                                                        aria-describedby="addon-wrapping">
+                                                                </div>
+                                                            </div>
 
 
                                                 </div>
