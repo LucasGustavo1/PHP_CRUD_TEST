@@ -18,4 +18,4 @@ Route::get('/', function () {
 });
 
 Route::get('produtos' , [ProductController::class, 'index'])->name('products');
-
+Route::post('produto/cadastro',[ProductController::class, 'store'])->name('products.store');
