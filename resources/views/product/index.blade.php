@@ -210,20 +210,17 @@
                                                     </form>
                                                 </div>
                                             </div>
-
-
+                                         </div>
+                                        </div>
+                                   </tr>
+                                @endforeach
+                         </tbody>
+                     </table>
+                    </div>
                 </div>
-            </div>
-            </tr>
-            @endforeach
-            </tbody>
-            </table>
-        </div>
-    </div>
-    <div class="col-md-2"></div>
-    </div>
-
-    </div>
+         <div class="col-md-2"></div>
+     </div>
+ </div>
 
 
 

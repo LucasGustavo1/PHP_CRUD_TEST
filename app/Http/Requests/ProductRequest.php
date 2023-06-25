@@ -22,7 +22,10 @@ class ProductRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'description' => 'required',
+            'quantity' => 'required|integer',
+            'value' => 'required',
+            'product_types_id' => 'required|integer'
         ];
     }
 }
