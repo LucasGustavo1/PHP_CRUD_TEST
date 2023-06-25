@@ -117,7 +117,8 @@
                                                                 <h1 class="modal-title fs-5" id="exampleModalLabel">
                                                                     Editando Produtos</h1>
                                                                 <button type="button" class="btn-close"
-                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                    data-bs-dismiss="modal"
+                                                                    aria-label="Close"></button>
                                                             </div>
                                                             <div class="modal-body">
 
@@ -136,8 +137,8 @@
                                                                         id="addon-wrapping">Quantidade</span>
                                                                     <input type="text" class="form-control"
                                                                         placeholder="Digite a quantidade"
-                                                                        value="{{ $product->quantity }}" name="quantity"
-                                                                        aria-label="Username"
+                                                                        value="{{ $product->quantity }}"
+                                                                        name="quantity" aria-label="Username"
                                                                         aria-describedby="addon-wrapping">
                                                                 </div>
 
@@ -173,6 +174,12 @@
                                                     </form>
                                                 </div>
                                             </div>
+
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                                data-bs-target="#deletar{{ $product->id }}">
+                                                Deletar
+                                            </button>
 
 
                 </div>
