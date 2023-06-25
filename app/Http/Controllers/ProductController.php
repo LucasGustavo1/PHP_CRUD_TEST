@@ -54,4 +54,15 @@ class ProductController extends Controller
             return back()->with('erro', 'Não foi possível sua ação');
         }
     }
+
+    public function destroy(string $id)
+    {
+        try {
+            $product = Product::where('id', $id)->first();
+            $product->delete();
+            return back()->with('mensagem', 'Produto removido com sucesso!');
+        }   catch (\Throwable $th) {
+            return back()->with('erro', 'Não foi possível sua ação');
+        }
+    }
 }
