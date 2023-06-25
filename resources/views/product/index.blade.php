@@ -16,36 +16,97 @@
     <div class="row mt-5">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <div class="card-body">
-                <!-- Card-header -->
-                <table class="table">
+            <div class="card">
+                <div class="card-header">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#cadastrar">
+                        Cadastrar
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="cadastrar" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <form action="{{ route('products.store') }}" method="POST">
+                                @csrf
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastrando Produtos</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="input-group flex-nowrap">
+                                            <span class="input-group-text" id="addon-wrapping">Descrição</span>
+                                            <input type="text" class="form-control" placeholder="Digite a descrição"
+                                                name="description" aria-label="Username"
+                                                aria-describedby="addon-wrapping">
+                                        </div>
+
+                                        <div class="input-group flex-nowrap">
+                                            <span class="input-group-text" id="addon-wrapping">Quantidade</span>
+                                            <input type="text" class="form-control" placeholder="Digite a quantidade"
+                                                name="quantity" aria-label="Username" aria-describedby="addon-wrapping">
+                                        </div>
+
+                                        <div class="input-group flex-nowrap">
+                                            <span class="input-group-text" id="addon-wrapping">
+                                                Preço</span>
+                                            <input type="text" class="form-control" placeholder="Digite o preço"
+                                                name="value" aria-label="Username" aria-describedby="addon-wrapping">
+                                        </div>
+
+                                        <select class="form-select" name="product_types_id">
+                                            <option value="">Selecione um tipo de produto</option>
+                                            @foreach ($productsTypes as $type)
+                                                <option value="{{ $type->id }}">{{ $type->name }}</option>
+                                            @endforeach
+                                        </select>
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Fechar</button>
+                                        <button type="submit" class="btn btn-primary">Salvar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
                     <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Descricao</th>
-                                <th scope="col">Quantidade</th>
-                                <th scope="col">Valor</th>
-                                <th scope="col">Tipo De Produto</th>
-                                <th scope="col">Ações</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($products as $product)
+                        <table class="table">
+                            <thead>
                                 <tr>
-                                    <th scope="row">{{ $product->id }}</th>
-                                    <td>{{ $product->description }}</td>
-                                    <td>{{ $product->quantity }}</td>
-                                    <td>{{ $product->value }}</td>
-                                    <td>{{ $product->type->name }}</td>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Descricao</th>
+                                    <th scope="col">Quantidade</th>
+                                    <th scope="col">Valor</th>
+                                    <th scope="col">Tipo De Produto</th>
+                                    <th scope="col">Ações</th>
                                 </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                @foreach ($products as $product)
+                                    <tr>
+                                        <th scope="row">{{ $product->id }}</th>
+                                        <td>{{ $product->description }}</td>
+                                        <td>{{ $product->quantity }}</td>
+                                        <td>{{ $product->value }}</td>
+                                        <td>{{ $product->type->name }}</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                </div>
             </div>
+            <div class="col-md-2"></div>
         </div>
-        <div class="col-md-2"></div>
-    </div>
+
+            </div>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
