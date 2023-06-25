@@ -186,15 +186,19 @@
                                                 <div class="modal-dialog">
                                                     <form action="{{ route('products.destroy', $product->id) }}"
                                                         method="POST">
+                                                        @csrf
+                                                        @method('delete')
                                                         <div class="modal-content">
                                                             <div class="modal-header">
                                                                 <h1 class="modal-title fs-5" id="exampleModalLabel">
                                                                     Deletando Produtos</h1>
                                                                 <button type="button" class="btn-close"
-                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                    data-bs-dismiss="modal"
+                                                                    aria-label="Close"></button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <h6 style="text-align: center">Deseja deletar esse produto
+                                                                <h6 style="text-align: center">Deseja deletar esse
+                                                                    produto
                                                                     ?<h6>
                                                             </div>
                                                             <div class="modal-footer">
